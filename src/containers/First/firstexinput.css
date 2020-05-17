@@ -1,3 +1,16 @@
 .containerStyle{
     padding: 3rem;
 }
+.constainerProbalities_item{
+    margin-top: 1rem;
+}
+
+.firstExResult_card{
+    margin: 1rem;
+}
+
+.firstExResult_card_graph{
+    margin: 1rem;
+    padding: 1rem;
+    height: 300px;
+}

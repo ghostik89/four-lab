@@ -1,38 +1,23 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Button, Divider, Space, Tooltip,  Typography} from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
+import { PlusOutlined, CalculatorOutlined } from '@ant-design/icons';
 import "./firstexinput.css"
-import {ProbabilityItem} from "../../constants/interfaces";
 import {ProbalityItemComponent} from "../../components/ProbalityItem";
-import {ProbalityContainer} from "./ProbalityContainer";
+import {useObserver} from "mobx-react-lite";
+import {useStore} from "../../helpers/use-store";
+import {Link} from "react-router-dom";
+import {firstExCalcPath} from "../../constants/paths";
 
 export const FirstExInput = () => {
-    const [arrayOfNums, setArrayOfNums] = useState<Array<ProbabilityItem>>([])
-    const { Title, Paragraph, Text } = Typography;
+    const { Title, Text } = Typography;
+    const probList = useStore();
 
-    useEffect(()=>{},[arrayOfNums])
-    const numChange = (value: ProbabilityItem, index:number) => {
-        let tempArr = arrayOfNums;
-        tempArr[index] = value
-        setArrayOfNums(tempArr)
+    const addProbality = () => {
+        probList.addProb({X:0, P:0})
     }
 
-    const deleteProbaliry = (index:number) =>{
-        let tempArr = arrayOfNums
-        tempArr = tempArr.splice(index, 1);
-        setArrayOfNums(tempArr)
-    }
-
-    const addProbality = () =>{
-        let tempArr = arrayOfNums
-        tempArr.push({X: 0, P: 0})
-        console.log(tempArr)
-        setArrayOfNums(tempArr)
-    }
-
-
-    return(
-       <div className={"containerStyle"}>
+    return useObserver ( () => (
+        <div className={"containerStyle"}>
            <Title>Введите данные для рассчета</Title>
            <Divider/>
            <Space>
@@ -40,8 +25,19 @@ export const FirstExInput = () => {
                <Tooltip title="Добавить эксперимент">
                    <Button type="primary" shape="circle" icon={<PlusOutlined />} onClick={addProbality}/>
                </Tooltip>
+               <Tooltip title="Рассчитать значения">
+                   <Link to={firstExCalcPath}>
+                       <Button type="primary" shape="circle" icon={<CalculatorOutlined />}/>
+                   </Link>
+                </Tooltip>
            </Space>
-           <ProbalityContainer array={arrayOfNums}/>
+            {probList.list.map((elem, index) => (
+                <ProbalityItemComponent
+                    probItem={elem}
+                    myStyle={"constainerProbalities_item"}
+                    deleteProb={() => {probList.removeProb(index)}}
+                />
+            ))}
        </div>
-    )
+       ))
 }

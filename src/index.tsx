@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {ProbList} from "./store/ProbList";
+import {StoreProvider} from "./helpers/store-provider";
+
+const probList = new ProbList([
+    {X:0, P:0}
+]);
+
+//@ts-ignore - for debugging
+window.probList = probList
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <StoreProvider value={probList}>
+        <App />
+    </StoreProvider>,
   document.getElementById('root')
 );
 
