@@ -15,8 +15,8 @@ import {FirstExResult} from "./containers/First/FirstExResult";
 function App() {
   return (
       <Layout className={"appLayout"}>
-        <MyPageHeader/>
         <Router>
+            <MyPageHeader/>
             <Switch>
                 <Route path={firstExCalcPath}>
                     <FirstExResult/>
