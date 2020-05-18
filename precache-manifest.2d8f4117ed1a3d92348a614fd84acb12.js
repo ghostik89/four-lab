@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ad02388da794856e062b108f70335338",
+    "revision": "43b79d02aa9afa902e5beab0474117cf",
     "url": "/four-lab/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/four-lab/static/css/2.dafc00e9.chunk.css"
   },
   {
-    "revision": "43e9869f99ba0c5e5f0b",
+    "revision": "7a7079b2d989f913eca5",
     "url": "/four-lab/static/css/main.9d74cc68.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/four-lab/static/js/2.4aa8809c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "43e9869f99ba0c5e5f0b",
-    "url": "/four-lab/static/js/main.3b8c82e1.chunk.js"
+    "revision": "7a7079b2d989f913eca5",
+    "url": "/four-lab/static/js/main.bfd549e4.chunk.js"
   },
   {
     "revision": "b89bb2f317f6e6bf6a0e",
