@@ -32,7 +32,7 @@ export const ProbalityItemComponent = ({probItem, myStyle, deleteProb}: Probalit
                 <Text>Координата X:</Text>
                 <InputNumber value={pItem.X} onChange={xChange} disabled={!editable}/>
                 <Text>Вероятность:</Text>
-                <InputNumber max={1} min={0} value={pItem.P} onChange={pChange} disabled={!editable}/>
+                <InputNumber max={1} min={0} value={pItem.P} step={0.1} onChange={pChange} disabled={!editable}/>
                 {editable? <Tooltip title="Сохранить">
                     <Button type="primary" onClick={saveProbality} shape="circle" icon={<CheckOutlined/>}/>
                 </Tooltip>
