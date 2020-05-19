@@ -1,4 +1,4 @@
-import {Point, ProbabilityItem} from "../constants/interfaces";
+import {geometryData, Point, ProbabilityItem} from "../constants/interfaces";
 
 export function calcMathWait (arrProbalities:Array<ProbabilityItem>):number {
     function reducer (accumulator:number, currentValue:ProbabilityItem):number{
@@ -63,5 +63,27 @@ export function createDataFunc(arrProbalities:Array<ProbabilityItem>):Point[] {
         result.push({x: arrProbalities[0].X + 3, y: 1})
     }
 
+    return result
+}
+
+function factorial(n:number):number {
+    if(n === 0)
+        return  1
+    let result = n
+    for(let i:number = n - 1; i > 0; i++)
+        result *= i
+    return  result
+}
+
+export function combinations(n:number, k:number):number {return (factorial(n))/(factorial(n-k)*factorial(k))}
+
+
+export function dataSequence(data:geometryData):ProbabilityItem[] {
+    let result:ProbabilityItem[] = []
+
+    for(let i:number = data.m; i < data.n; i++) {
+        result.push({X:i, P:(combinations(i, data.M) * combinations(data.n - i, data.N - data.M)) / combinations(data.n, data.N)
+    })
+    }
     return result
 }

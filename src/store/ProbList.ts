@@ -1,6 +1,7 @@
 import {action, computed, observable} from "mobx";
 import Probitem from "./ProbItem";
-import {ProbabilityItem} from "../constants/interfaces";
+import {geometryData, ProbabilityItem} from "../constants/interfaces";
+import { combinations } from "../helpers/calcMath";
 
 export class ProbList{
     @observable.shallow list: Probitem[] = [];
@@ -21,6 +22,18 @@ export class ProbList{
         this.list.splice(index, 1);
     }
 
+    @action
+    clearList = () => {
+        this.list = []
+    }
+
+    @action
+    createDataSequence = (data:geometryData) => {
+        for(let i:number = data.m; i < data.n; i++) {
+            this.addProb({X:i, P:(combinations(i, data.M) * combinations(data.n - i, data.N - data.M)) / combinations(data.n, data.N)
+            })
+        }
+    }
 
     @computed
     get allProballities(): ProbabilityItem[] {
