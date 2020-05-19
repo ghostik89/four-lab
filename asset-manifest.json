@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/four-lab/static/css/main.9d74cc68.chunk.css",
-    "main.js": "/four-lab/static/js/main.bfd549e4.chunk.js",
-    "main.js.map": "/four-lab/static/js/main.bfd549e4.chunk.js.map",
+    "main.js": "/four-lab/static/js/main.ba71d376.chunk.js",
+    "main.js.map": "/four-lab/static/js/main.ba71d376.chunk.js.map",
     "runtime-main.js": "/four-lab/static/js/runtime-main.5462e8a0.js",
     "runtime-main.js.map": "/four-lab/static/js/runtime-main.5462e8a0.js.map",
     "static/css/2.dafc00e9.chunk.css": "/four-lab/static/css/2.dafc00e9.chunk.css",
-    "static/js/2.4aa8809c.chunk.js": "/four-lab/static/js/2.4aa8809c.chunk.js",
-    "static/js/2.4aa8809c.chunk.js.map": "/four-lab/static/js/2.4aa8809c.chunk.js.map",
+    "static/js/2.d30787ee.chunk.js": "/four-lab/static/js/2.d30787ee.chunk.js",
+    "static/js/2.d30787ee.chunk.js.map": "/four-lab/static/js/2.d30787ee.chunk.js.map",
     "index.html": "/four-lab/index.html",
-    "precache-manifest.2d8f4117ed1a3d92348a614fd84acb12.js": "/four-lab/precache-manifest.2d8f4117ed1a3d92348a614fd84acb12.js",
+    "precache-manifest.c68f7deb5787e1727e14d5bd1d592176.js": "/four-lab/precache-manifest.c68f7deb5787e1727e14d5bd1d592176.js",
     "service-worker.js": "/four-lab/service-worker.js",
     "static/css/2.dafc00e9.chunk.css.map": "/four-lab/static/css/2.dafc00e9.chunk.css.map",
     "static/css/main.9d74cc68.chunk.css.map": "/four-lab/static/css/main.9d74cc68.chunk.css.map",
-    "static/js/2.4aa8809c.chunk.js.LICENSE.txt": "/four-lab/static/js/2.4aa8809c.chunk.js.LICENSE.txt"
+    "static/js/2.d30787ee.chunk.js.LICENSE.txt": "/four-lab/static/js/2.d30787ee.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5462e8a0.js",
     "static/css/2.dafc00e9.chunk.css",
-    "static/js/2.4aa8809c.chunk.js",
+    "static/js/2.d30787ee.chunk.js",
     "static/css/main.9d74cc68.chunk.css",
-    "static/js/main.bfd549e4.chunk.js"
+    "static/js/main.ba71d376.chunk.js"
   ]
 }
