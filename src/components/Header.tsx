@@ -9,11 +9,9 @@ export const MyPageHeader = () => {
             ghost={false}
             title="Лабораторная работа №4"
             extra={[
-                <Link key="2" to={firstExInputPath}>
-                    <Button>Задание 1</Button>
-                </Link>,
-                <Button key="1">Задание 2</Button>,
-            ]}
+                <Link key="1" to={firstExInputPath}>
+                    <Button>Лаборатоная работа №4</Button>
+                </Link>]}
         />
     )
 }

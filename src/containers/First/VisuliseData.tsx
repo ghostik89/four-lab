@@ -77,7 +77,6 @@ export const FirstExResult = () => {
     return useObserver(() =>(
         <div className={"containerStyle"}>
             <Title>Рассчет первого задания.</Title>
-            <Divider/>
             <Card title={"Значения экспериментов"} className={"firstExResult_card"}>
                 <Table dataSource={probList.allProballities} columns={columns}/>
                 <Divider/>
@@ -100,19 +99,19 @@ export const FirstExResult = () => {
             </Card>
             {normalizeCondition(probList.allProballities) === 1 || probList.checkDuplicates?
                 <>
-                    <Row>
+                    <Row gutter={[8, 8]}>
                         <Col span={8}>
-                            <Card title={"Функция распределения"} className={"firstExResult_card"}>
+                            <Card title={"Функция распределения"}>
                                 <Text>F(x) = </Text>
                                 <OutFuncRas arrayOfNums={probList.allProballities}/>
                             </Card>
                         </Col>
                         <Col span={8}>
-                            <Card title={"Математическое ожидание"} className={"firstExResult_card"}>
+                            <Card title={"Математическое ожидание"}>
                                 <Text>{`M(x) = Σpi * xi = ${calcMathWait(probList.allProballities).toFixed(4)}`}</Text>
                             </Card>
                         </Col>
-                        <Col span={7} className={"firstExResult_card"}>
+                        <Col span={7}>
                             <Card title={"Дисперсия"}>
                                 <Text>{`D(x) = M(X^2) - M(X)^2 = ${calcMathDispertion(probList.allProballities).toFixed(4)}`}</Text>
                             </Card>

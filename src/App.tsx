@@ -10,7 +10,7 @@ import {
 import {FirstExInput} from './containers/First/FistExInput'
 import "./App.css"
 import {firstExCalcPath, firstExInputPath} from "./constants/paths";
-import {FirstExResult} from "./containers/First/FirstExResult";
+import {FirstExResult} from "./containers/First/VisuliseData";
 
 function App() {
   return (

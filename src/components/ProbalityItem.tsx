@@ -1,4 +1,4 @@
-import {Button, InputNumber, Space, Tooltip, Typography} from "antd";
+import {Button, InputNumber, Tooltip, Typography, Row, Col} from "antd";
 import React, {useState} from "react";
 import {ProbabilityItem} from "../constants/interfaces";
 import ProbItem from "../store/ProbItem";
@@ -28,23 +28,35 @@ export const ProbalityItemComponent = ({probItem, myStyle, deleteProb}: Probalit
 
     return(
         <div className={myStyle}>
-            <Space>
-                <Text>Координата X:</Text>
-                <InputNumber value={pItem.X} onChange={xChange} disabled={!editable}/>
-                <Text>Вероятность:</Text>
-                <InputNumber max={1} min={0} value={pItem.P} step={0.1} onChange={pChange} disabled={!editable}/>
-                {editable? <Tooltip title="Сохранить">
-                    <Button type="primary" onClick={saveProbality} shape="circle" icon={<CheckOutlined/>}/>
-                </Tooltip>
-                    :<>
+            <Row gutter={[8, 8]} align="middle">
+                <Col>
+                    <Text>Координата X:</Text>
+                </Col>
+                <Col>
+                    <InputNumber value={pItem.X} onChange={xChange} disabled={!editable}/>
+                </Col>
+                <Col>
+                    <Text>Вероятность:</Text>
+                </Col>
+                <Col>
+                    <InputNumber max={1} min={0} value={pItem.P} step={0.1} onChange={pChange} disabled={!editable}/>
+                </Col>
+                {editable ? <Col><Tooltip title="Сохранить">
+                        <Button type="primary" onClick={saveProbality} shape="circle" icon={<CheckOutlined/>}/>
+                    </Tooltip></Col>
+                    : <><Col>
                         <Tooltip title="Редактировать">
-                            <Button type="primary" onClick={() => setEditable(true)} shape="circle" icon={<EditOutlined/>}/>
+                            <Button type="primary" onClick={() => setEditable(true)} shape="circle"
+                                    icon={<EditOutlined/>}/>
                         </Tooltip>
-                        <Tooltip title="Удалить">
-                            <Button type="primary" onClick={() => deleteProb()} danger shape="circle" icon={<DeleteOutlined />} />
-                        </Tooltip>
-                    </>}
-            </Space>
+                    </Col>
+                        <Col>
+                            <Tooltip title="Удалить">
+                                <Button type="primary" onClick={() => deleteProb()} danger shape="circle"
+                                        icon={<DeleteOutlined/>}/>
+                            </Tooltip>
+                        </Col></>}
+            </Row>
         </div>
     )
 }
