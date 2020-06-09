@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/four-lab/static/css/main.9d74cc68.chunk.css",
-    "main.js": "/four-lab/static/js/main.ba71d376.chunk.js",
-    "main.js.map": "/four-lab/static/js/main.ba71d376.chunk.js.map",
+    "main.js": "/four-lab/static/js/main.d308772b.chunk.js",
+    "main.js.map": "/four-lab/static/js/main.d308772b.chunk.js.map",
     "runtime-main.js": "/four-lab/static/js/runtime-main.5462e8a0.js",
     "runtime-main.js.map": "/four-lab/static/js/runtime-main.5462e8a0.js.map",
     "static/css/2.dafc00e9.chunk.css": "/four-lab/static/css/2.dafc00e9.chunk.css",
     "static/js/2.d30787ee.chunk.js": "/four-lab/static/js/2.d30787ee.chunk.js",
     "static/js/2.d30787ee.chunk.js.map": "/four-lab/static/js/2.d30787ee.chunk.js.map",
     "index.html": "/four-lab/index.html",
-    "precache-manifest.c68f7deb5787e1727e14d5bd1d592176.js": "/four-lab/precache-manifest.c68f7deb5787e1727e14d5bd1d592176.js",
+    "precache-manifest.b61ffefc1115c89c2de373aa3fc07877.js": "/four-lab/precache-manifest.b61ffefc1115c89c2de373aa3fc07877.js",
     "service-worker.js": "/four-lab/service-worker.js",
     "static/css/2.dafc00e9.chunk.css.map": "/four-lab/static/css/2.dafc00e9.chunk.css.map",
     "static/css/main.9d74cc68.chunk.css.map": "/four-lab/static/css/main.9d74cc68.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.dafc00e9.chunk.css",
     "static/js/2.d30787ee.chunk.js",
     "static/css/main.9d74cc68.chunk.css",
-    "static/js/main.ba71d376.chunk.js"
+    "static/js/main.d308772b.chunk.js"
   ]
 }
